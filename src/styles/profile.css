@@ -1,0 +1,82 @@
+.cv-container {
+  margin: 16px;
+}
+
+.cv-intro {
+  display: flex;
+  align-items: center;
+}
+
+.cv-photo {
+  margin-right: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cv-intro-card {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.cv-intro-card h1,
+.cv-intro-card p {
+  margin: 0;
+}
+
+.cv-sections {
+  margin-top: 24px;
+  padding-left: 1.5em;
+}
+
+.cv-sections > li {
+  margin-bottom: 1.5em;
+}
+
+.cv-sections h2 {
+  margin: 0 0 0.5em;
+}
+
+.cv-sections ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.cv-sections ul ul {
+  list-style-type: disc;
+}
+
+.cv-sections ul ul ul {
+  margin-left: 0.5em;
+  list-style-type: circle;
+}
+
+.cv-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.cv-table th,
+.cv-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.cv-table th {
+  background-color: #f5f5f5;
+}
+
+.cv-table ul {
+  margin: 8px 0 0;
+  padding-left: 1.5em;
+}
+
+.cv-projects {
+  padding-left: 1.5em;
+}
