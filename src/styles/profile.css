@@ -12,14 +12,14 @@
 
 .cv-photo {
   margin-right: 16px;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .cv-intro-card {
-  background-color: #c6c6c6;
+  background-color: #b5dfff;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -113,4 +113,82 @@
 
 .cv-projects {
   padding-left: 1.5em;
+}
+
+/* === Onglets (Tabs) == */
+.cv-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.cv-tab {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.2s;
+}
+
+.cv-tab:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.cv-tab-active {
+  color: #111827;
+  background: transparent;
+  border-bottom: 2px solid #3b82f6;
+  font-weight: 600;
+}
+
+.cv-tab-content {
+  padding: 16px 0;
+}
+
+/* Adaptation des sections pour les onglets */
+.cv-tab-content {
+  position: relative;
+}
+
+.cv-tab-panel {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.5s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.cv-tab-panel-active {
+  opacity: 1;
+  max-height: 2000px;
+  transform: translateY(0);
+}
+
+.cv-tab-content > .cv-tab-panel > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-tab-content h2 {
+  margin-top: 0;
+}
+
+.cv-tab-content a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.cv-tab-content a:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+  transition: all 0.5s ease;
 }

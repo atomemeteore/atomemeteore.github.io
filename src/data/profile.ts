@@ -13,12 +13,13 @@ export interface Education {
 export interface Project {
   title: string;
   url: string;
+  description: string;
 }
 
-export type SkillItem =
-  | { type: 'text'; content: string }
-  | { type: 'labeled'; label: string; content: string }
-  | { type: 'group'; title: string; items: string[] };
+export interface SkillsTable {
+  label: string;
+  content: string;
+}
 
 export interface LinkItem {
   type: 'email' | 'linkedin' | 'github' | 'mobility' | 'phone';
@@ -26,7 +27,7 @@ export interface LinkItem {
 }
 
 export interface CV {
-  skills: SkillItem[];
+  skills: SkillsTable[];
   experiences: Experience[];
   formation: Education[];
   projects: Project[];
@@ -47,47 +48,16 @@ export const profile = {
     {type: 'mobility', content: 'Driving license (B) (Owns a vehicle)'},
     {type: 'phone', content: '06.95.06.29.27'},
   ] satisfies LinkItem[],
+
   skills: [
-    {
-      type: 'group',
-      title: 'Programming Languages, Web Tools, and Version Control',
-      items: [
-        'Python, R, Bash, HTML5/CSS3/JavaScript, Git - GitHub',
-      ],
-    },
-    {
-      type: 'group',
-      title: 'Bioinformatics Tools',
-      items: [
-        'Pangenomics : PGGB, Minigraph-cactus, Odgi',
-        'Transcriptomics : Trimmomatic, STAR, featureCounts, DESeq2',
-        'FastQC, Samtools, vcf-compare',
-      ],
-    },
-    {
-      type: 'group',
-      title: 'Bioinformatics Tools',
-      items: [
-        'Pangenomics : PGGB, Minigraph-cactus, Odgi',
-        'Transcriptomics : Trimmomatic, STAR, featureCounts, DESeq2',
-        'FastQC, Samtools, vcf-compare',
-      ],
-    },
-    { type: 'labeled', label: 'Operating Systems', content: 'Linux, Windows' },
-    { type: 'labeled', label: 'Databases', content: 'SQL, DBeaver' },
-    { type: 'labeled', label: 'IDE', content: 'VSCode, Cursor, RStudio' },
-    {
-      type: 'labeled',
-      label: 'Reference Databases',
-      content: 'RefSeq, GenBank, BioProject, SRA Aramemnon, STRING, UniProt, NCBI, GTDB.',
-    },
-    {
-      type: 'labeled',
-      label: 'Biology & Lab Techniques',
-      content:
-        'PCR, restriction enzyme digestion, genomic DNA extraction, Golden Braid 2.0 cloning',
-    },
-  ] satisfies SkillItem[],
+    {label: 'Programming Languages, Web Tools, and Version Control', content: 'Python, R, Bash, HTML5/CSS3/JavaScript, Git - GitHub' },
+    {label: 'Bioinformatics Tools', content: 'Pangenomics : PGGB, Minigraph-cactus, Odgi; Transcriptomics : Trimmomatic, STAR, featureCounts, DESeq2; FastQC, Samtools, vcf-compare' },
+    {label: 'Operating Systems', content: 'Linux, Windows' },
+    {label: 'Databases', content: 'SQL, DBeaver' },
+    {label: 'IDE', content: 'VSCode, Cursor, RStudio' },
+    {label: 'Reference Databases', content: 'RefSeq, GenBank, BioProject, SRA Aramemnon, STRING, UniProt, NCBI, GTDB.' },
+    {label: 'Biology & Lab Techniques', content: 'PCR, restriction enzyme digestion, genomic DNA extraction, Golden Braid 2.0 cloning' },
+  ] satisfies SkillsTable[],
   experiences: [
     {
       year: '2025-2027 (Ongoing)',
@@ -156,10 +126,12 @@ export const profile = {
       title:
         'Transcriptomics Analysis of Chicken Breast Muscle and Shear Force Differences',
       url: 'https://github.com/atomemeteore/chicken_RNAseq_analysis',
+      description: 'This repository contains an RNA-seq analysis pipeline that examines gene expression patterns in chicken breast muscles under different shear force conditions.'
     },
     {
       title: 'Single-Cell RNA-seq Pipeline Comparison',
       url: 'https://github.com/atomemeteore/sc-RNAseq',
+      description: 'This repository contains the analysis of single-cell RNA sequencing data using both Python (Scanpy) and R (Seurat) approaches.'
     },
   ] satisfies Project[],
 };
