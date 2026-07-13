@@ -20,19 +20,49 @@ export type SkillItem =
   | { type: 'labeled'; label: string; content: string }
   | { type: 'group'; title: string; items: string[] };
 
+export interface LinkItem {
+  type: 'email' | 'linkedin' | 'github' | 'mobility' | 'phone';
+  content: string;
+}
+
+export interface CV {
+  skills: SkillItem[];
+  experiences: Experience[];
+  formation: Education[];
+  projects: Project[];
+}
+
 export const profile = {
   name: 'Alexis Nguyen',
   photo: './alexis.png',
-  greeting: "Hello, I'm Alexis Nguyen",
+  greeting: "Alexis Nguyen",
   intro: [
     "I'm currently an engineer in bioinformatics at TIMC Lab (Tree team) in Grenoble and I'm working on phylogenetics.",
     'You can see here my formation, skills and experiences.',
   ],
+  links: [
+    {type: 'email', content: 'alexisnguyen97@yahoo.fr'},
+    {type: 'linkedin', content: 'https://www.linkedin.com/in/alexis-hoang-nguyen-099870187/'},
+    {type: 'github', content: 'https://github.com/atomemeteore'},
+    {type: 'mobility', content: 'Driving license (B) (Owns a vehicle)'},
+    {type: 'phone', content: '06.95.06.29.27'},
+  ] satisfies LinkItem[],
   skills: [
     {
-      type: 'text',
-      content:
-        'Programming Languages, Web Tools, and Version Control : Python, R, Bash, HTML5/CSS3/JavaScript, Git - GitHub',
+      type: 'group',
+      title: 'Programming Languages, Web Tools, and Version Control',
+      items: [
+        'Python, R, Bash, HTML5/CSS3/JavaScript, Git - GitHub',
+      ],
+    },
+    {
+      type: 'group',
+      title: 'Bioinformatics Tools',
+      items: [
+        'Pangenomics : PGGB, Minigraph-cactus, Odgi',
+        'Transcriptomics : Trimmomatic, STAR, featureCounts, DESeq2',
+        'FastQC, Samtools, vcf-compare',
+      ],
     },
     {
       type: 'group',

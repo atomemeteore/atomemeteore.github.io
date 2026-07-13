@@ -15,7 +15,7 @@ function SkillEntry({ item }: { item: SkillItem }) {
 
   return (
     <li>
-      {item.title}
+      <strong>{item.title}</strong>
       <ul>
         {item.items.map((subitem) => (
           <li key={subitem}>{subitem}</li>
