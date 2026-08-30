@@ -6,7 +6,8 @@ export function EducationTable() {
       <h2>
         <strong>Formation</strong>
       </h2>
-      <table className="cv-table">
+      <div className="cv-table-wrap">
+        <table className="cv-table">
         <thead>
           <tr>
             <th>Année</th>
@@ -22,6 +23,7 @@ export function EducationTable() {
           ))}
         </tbody>
       </table>
+      </div>
     </li>
   );
 }

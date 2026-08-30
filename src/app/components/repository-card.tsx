@@ -60,7 +60,7 @@ export function RepositoryCard({ repo }: RepositoryCardProps) {
             href={repo.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-primary flex items-center gap-2"
+            className="hover:underline text-primary flex items-center gap-2 min-w-0 break-words"
           >
             {repo.name}
             <ExternalLink className="w-4 h-4" />

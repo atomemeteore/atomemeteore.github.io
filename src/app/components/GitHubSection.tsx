@@ -70,10 +70,10 @@ export function GitHubSection() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
-        <div className="mb-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Github className="w-12 h-12" />
-            <h1 className="text-4xl font-bold">Mon Profil GitHub</h1>
+        <div className="mb-8 text-center px-2">
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-4 min-w-0">
+            <Github className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
+            <h1 className="text-2xl sm:text-4xl font-bold break-words">Mon Profil GitHub</h1>
           </div>
         </div>
 

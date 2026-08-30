@@ -33,8 +33,8 @@ export function GitHubProfile({ user }: GitHubProfileProps) {
             </Avatar>
           </div>
           
-          <div className="flex-1">
-            <h1 className="text-3xl font-bold mb-2">{user.name || user.login}</h1>
+          <div className="flex-1 min-w-0">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-2 break-words">{user.name || user.login}</h1>
             <p className="text-muted-foreground mb-4">@{user.login}</p>
             
             {user.bio && (
@@ -71,7 +71,7 @@ export function GitHubProfile({ user }: GitHubProfileProps) {
               )}
             </div>
             
-            <div className="flex gap-6 text-sm">
+            <div className="flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-1">
                 <Users className="w-4 h-4" />
                 <span><strong>{user.followers}</strong> followers</span>

@@ -6,7 +6,8 @@ export function ExperienceTable() {
       <h2>
         <strong>Experiences</strong>
       </h2>
-      <table className="cv-table">
+      <div className="cv-table-wrap">
+        <table className="cv-table">
         <thead>
           <tr>
             <th>Année</th>
@@ -38,6 +39,7 @@ export function ExperienceTable() {
           ))}
         </tbody>
       </table>
+      </div>
     </li>
   );
 }

@@ -6,7 +6,8 @@ export function SkillsTable() {
       <h2>
         <strong>Skills</strong>
       </h2>
-      <table className="cv-table">
+      <div className="cv-table-wrap">
+        <table className="cv-table">
         <thead>
           <tr>
             <th>Category</th>
@@ -22,6 +23,7 @@ export function SkillsTable() {
           ))}
         </tbody>
       </table>
+      </div>
     </li>
   );
 }
