@@ -192,3 +192,67 @@
   background-color: #f3f4f6;
   transition: all 0.5s ease;
 }
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+}
+
+.dark .cv-intro {
+  background-color: var(--card);
+}
+
+.dark .cv-intro-card {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.dark .cv-link,
+.dark .cv-link-text {
+  background-color: var(--card);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.dark .cv-link:hover {
+  background-color: var(--accent);
+}
+
+.dark .cv-table th,
+.dark .cv-table td {
+  border-color: var(--border);
+}
+
+.dark .cv-table th {
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+.dark .cv-tabs {
+  border-bottom-color: var(--border);
+}
+
+.dark .cv-tab {
+  color: var(--muted-foreground);
+}
+
+.dark .cv-tab:hover {
+  color: var(--foreground);
+  background-color: var(--accent);
+}
+
+.dark .cv-tab-active {
+  color: var(--foreground);
+  border-bottom-color: var(--primary);
+}
+
+.dark .cv-tab-content a {
+  color: oklch(0.7 0.12 250);
+}
+
+.dark .cv-tab-content a:hover {
+  color: var(--foreground);
+  background-color: var(--accent);
+}
